@@ -5,21 +5,23 @@ export default function Player ({ iconUrl, isReversed, rank, username }) {
 }
 
 function renderPlayer (iconUrl, rank, username) {
+    let originalUsername = username.replace('-','#')
     return (
         <li className='player'>
-            <image className='player__icon' src={iconUrl} alt={username} />
-            <span className='player__username'>{username}</span>
+            <img className='player__icon' src={iconUrl} alt={originalUsername} />
+            <span className='player__username'>{originalUsername}</span>
             <span className='player__rank'>{rank}</span>
         </li>
     )
 }
 
 function renderPlayerReversed (iconUrl, rank, username) {
+    let originalUsername = username.replace('-','#')    
     return (
         <li className='player'>
             <span className='player__rank'>{rank}</span>
-            <span className='player__username'>{username}</span>
-            <image className='player__icon' src={iconUrl} alt={username} />
+            <span className='player__username'>{originalUsername}</span>
+            <img className='player__icon' src={iconUrl} alt={originalUsername} />
         </li>
     )
 }

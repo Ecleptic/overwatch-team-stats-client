@@ -58,7 +58,7 @@ export default class PlayerForm extends Component {
   render () {
     return (
       <form className="player-form" onSubmit={this.onSubmit}>
-        <div className="TeamColumn LeftSide">
+        <div className="teamColumn leftSide">
           <h3>Team 1</h3>
           {this.state.leftTeamPlayerTags.map((playerTag, index) => (
             <input 
@@ -70,8 +70,8 @@ export default class PlayerForm extends Component {
           ))}
         </div>
 
-        <div className="TeamColumn RightSide">
-          <h3>Team 2</h3>          
+        <div className="teamColumn rightSide">
+          <h3>Team 2</h3>
           {this.state.rightTeamPlayerTags.map((playerTag, index) => (
             <input 
               className="playerInput" 

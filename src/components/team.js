@@ -2,7 +2,7 @@ import React from 'react'
 
 import Player from './player'
 
-export default function Team ({ players, isReversed, teamName }) {
+export default function Team({players, isReversed, teamName}) {
     return (
         <div className='team'>
             <h3 className='team__name'>{teamName}</h3>
@@ -15,9 +15,16 @@ export default function Team ({ players, isReversed, teamName }) {
 }
 
 function renderPlayer(player, index, isReversed) {
-    const iconUrl = player.us.stats.competitive.overall_stats.avatar
-    const rank = player.us.stats.competitive.overall_stats.comprank
-    const username = player.username
+    if (player.us) {
+        const iconUrl = player.us.stats.competitive.overall_stats.avatar
+        const rank = player.us.stats.competitive.overall_stats.comprank
+        const username = player.username
+        return <Player
+            key={index}
+            iconUrl={iconUrl}
+            isReversed={isReversed}
+            rank={rank}
+            username={username}/>
+    }
 
-    return <Player key={index} iconUrl={iconUrl} isReversed={isReversed} rank={rank} username={username} />
 }

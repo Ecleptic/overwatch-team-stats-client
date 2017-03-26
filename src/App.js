@@ -64,7 +64,7 @@ class App extends Component {
   _renderSubmittedState () {
     return (
       <div className='teams-wrapper'>
-        <Team players={this.state.leftTeamData} isReversed={false} teamName='Team 1' />
+        <Team players={this.state.leftTeamData} isReversed={false} teamName='Team 1'  />
         <Team players={this.state.rightTeamData} isReversed={true} teamName='Team 2' />
       </div>
     )

@@ -1,36 +1,14 @@
-.player-form {
+.player-form, .teams-wrapper {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-}
-
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 *{
   box-sizing: border-box;
 }
 
-.TeamColumn{
+.teamColumn ,.team{
   flex-direction: column;
   flex-basis: 50%;
   padding: 10px;
@@ -48,4 +26,23 @@
 
 .submit {
   flex-grow: 1;
+  margin-top: 1rem;
+}
+
+.player{
+  padding:1em;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+.player__icon{
+  width:100px;
+  height:100px;
+  border:1px solid #021a40;
+}
+.team:first-child, .leftSide{
+  background:#68a3e5;
+}
+.team:last-child, .rightSide{
+  background: palevioletred;
 }
