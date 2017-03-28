@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route path="/" Component={unsubmittedPage}/> 
+          <Route exact path="/" Component={unsubmittedPage}/> 
           <Route path="/unsubmitted" Component={submittedPage}/> 
         </div>
       </Router>
