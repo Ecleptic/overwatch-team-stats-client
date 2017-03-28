@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Team from './team'
 
 
-class About extends Component {
+class submittedPage extends Component {
     render() {
         return (
             <div className='teams-wrapper'>
@@ -14,4 +14,4 @@ class About extends Component {
     }
 }
 
-export default About
+export default submittedPage

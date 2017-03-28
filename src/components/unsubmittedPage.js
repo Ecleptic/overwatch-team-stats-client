@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PlayerForm from './playerForm'
 
 
-class About extends Component {
+class unsubmittedPage extends Component {
     render() {
         return (
         // <PlayerForm />
@@ -11,7 +11,7 @@ class About extends Component {
     }
 }
 
-export default About
+export default unsubmittedPage
 
 // old code again
         // return (<PlayerForm onSubmit={this.onPlayerFormSubmit}/>)
