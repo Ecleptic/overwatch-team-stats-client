@@ -5,8 +5,8 @@ import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import PlayerForm from './components/playerForm'
 import Team from './components/team'
 
-import unsubmittedPage from './components/unsubmittedPage'
-import submittedPage from './components/submittedPage'
+import UnsubmittedPage from './components/unsubmittedPage'
+import SubmittedPage from './components/submittedPage'
 
 class App extends Component {
 
@@ -46,8 +46,8 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" Component={unsubmittedPage}/> 
-          <Route path="/unsubmitted" Component={submittedPage}/> 
+          <Route exact path="/" component={UnsubmittedPage}/> 
+          <Route path="/submitted" component={SubmittedPage}/> 
         </div>
       </Router>
     )
@@ -67,13 +67,6 @@ class App extends Component {
     return url.slice(0, url.length - 1)
   }
 
-  /*submittedState() { 
-  <div className='teams-wrapper'> 
-    <Team players={this.state.leftTeamData} isReversed={false} teamName='Team 1'/> 
-    <Team players={this.state.rightTeamData} isReversed={true} teamName='Team 2'/> 
-  </div>
-  }*/
-
   _renderSubmittedState() {
     return (
       <div className='teams-wrapper'>
@@ -82,10 +75,6 @@ class App extends Component {
       </div>
     )
   }
-
-//   unsubmittedState() { 
-//   <PlayerForm onSubmit={this.onPlayerFormSubmit} />
-// }
 
 _renderUnsubmittedState() {
   return (<PlayerForm onSubmit={this.onPlayerFormSubmit}/>)

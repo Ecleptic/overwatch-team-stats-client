@@ -2,16 +2,15 @@ import React, {Component} from 'react';
 import PlayerForm from './playerForm'
 
 
-class unsubmittedPage extends Component {
+class UnsubmittedPage extends Component {
     render() {
         return (
-        // <PlayerForm />
-        <h1>Unsubmitted Page!</h1>
+        <PlayerForm />
         )
     }
 }
 
-export default unsubmittedPage
+export default UnsubmittedPage
 
 // old code again
         // return (<PlayerForm onSubmit={this.onPlayerFormSubmit}/>)
